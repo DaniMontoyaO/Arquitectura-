@@ -1,0 +1,7 @@
+V3 3
+FL C:/Users/utp/Desktop/registro/registro/registro.vhd 2016/09/05.19:15:55 P.20131013
+EN work/registro 1473121070 \
+      FL C:/Users/utp/Desktop/registro/registro/registro.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/registro/Behavioral 1473121071 \
+      FL C:/Users/utp/Desktop/registro/registro/registro.vhd EN work/registro 1473121070

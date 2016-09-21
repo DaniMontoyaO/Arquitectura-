@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/utp/Desktop/registro/registro/registro.xst" -ofn "C:/Users/utp/Desktop/registro/registro/registro.syr" 
