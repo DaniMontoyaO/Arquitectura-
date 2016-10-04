@@ -1,0 +1,169 @@
+Este taller consiste en mejorar las habilidades de los conceptos aprendidos en clase.
+
+1.	Implemente en VHDL un FlipFlop de 1bit, con entradas D, Reset, CLK, y una salida Dout.
+
+Pendiente.
+         __________ 
+D-------|          |    
+        |          |    
+RST-----|          |_______Dout    
+        |          |
+CLK-----|>         |
+        |__________|
+
+
+2. Escriba los 4 principios de diseño de hardware aprendidos en clase.
+R//
+1.La simplicidad favorece la regularidad
+2.Entre más pequeño es más rápido
+3.Hacer el caso común más rápido
+4.Buenos diseños demandan grandes compromisos
+
+
+
+3. Convertir a instrucciones de bajo nivel.
+
+ASIGNACION DE REGISTROS
+int x=0; ---- x=%L0  ADD %g0,0,%L0
+int y=8; ---- y=%L1  ADD %g0, 8,%L1
+int z=1; ---- z=%L2  ADD %g0, 1,%L2
+
+OPERACIONES
+y=x+3;              ADD %L0, 3, %L1
+z=z+3;              ADD %L2, 3, %L2
+x=(x-z)+ (3+y);     SUB %L0, %L2, %L2
+                    ADD %L3, 3, %L3
+                    ADD %L3, %L2, %L0
+
+
+4. Usar el ld, y st.
+
+EJERCICIO 1
+
+a[4]= a[2]+x; 
+
+ASIGNACION DE REGISTROS
+a=%O0  Variable de Salida   
+a=%L1  Vatiable de Entrada    
+x=%L2
+
+OPERACIONES
+
+LD  [%L1+(2*4)],%L3
+ADD %L2,%L3,%L2
+ST  %L2,[ %O0  + (4*4) ]
+
+
+EJERCICIO 2
+
+y[0] = y[40]+13;
+
+
+ASIGNACION DE REGISTROS
+
+y=%O0  Variable de salida     
+y=%L1  Variable de entrada
+13 Es un Inmediato
+
+OPERACIONES
+
+LD  [%L1+(40*4)],%L2
+ADD  %L2,13,%L3
+ST %L3,[ %O0  + (0*4) ]
+
+
+5. Convertir a lenguaje de máquina.
+
+a.int main(){
+
+int i =3; ---------- i=%L0  ADD    %g0,3,%L0        LENGUAJE BAJO NIVEL
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	10000	000000	00000	1	0000000000011
+
+
+p=2; --------------p=%L1    ADD   %g0,2,%L1
+
+OP	RD	OP3	RS1	i	Unusued/zero -RS2
+10	10001	000000	00000	1	0000000000010
+
+
+return i+3;                ADD  %L0,3,%O0
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	01000	000000	10000	1	0000000000011
+
+}
+
+
+b.
+int main(){
+
+
+int p=3; ---- p=%L0     ADD %g0,3,%L0
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	10000	000000	00000	1	0000000000011
+
+x=1; ---- x=%L1         ADD %g0, 1,%L1
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	10001	000000	00000	1	0000000000001
+
+z=4; ---- z=%L2         ADD %g0,4 ,%L2
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	10010	000000	00000	1	0000000000100
+
+int w=0; ------ w=%L3   ADD %g0,0 ,%L3
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	10011	000000	00000	1	0000000000000
+
+
+OPERACIONES
+
+w=(p+40)+(x-z);        ADD %L0, 40, %L0    Leng.alto1         
+                       SUB %L1, %L2, %L1   Leng.alto2          
+                       ADD %L0, %L1, %L4   Leng.alto3  
+Leng.alto1
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	10000	000000	10000	1	0000000101000
+
+Leng.alto2
+OP	RD	OP3	RS1	i	Unusued/zero	RS2
+10	10001	000100	10001	0	00000000	10010
+
+Leng.alto3
+OP	RD	OP3	RS1	i	Unusued/zero	RS2
+10	10100	000000	10000	0	00000000	10001
+
+
+return 0 ;----%O0      ADD  %g0,0,%O0
+
+OP	RD	OP3	RS1	i	Unusued/zero- RS2
+10	01000	000000	00000	1	0000000000000
+
+}
+
+
+6. Inicializar las siguientes variables negativas usando OR.
+
+
+float n=-12; OR %g0,-12,%L0   
+        
+OP	RD	OP3	RS1	i	Unusued/zero -RS2
+10	10000	000010	00000	1	1111111110100
+
+
+float  a=-11;  OR %g0,-11,%L1  
+          
+OP	RD	OP3	RS1	i	Unusued/zero -RS2
+10	10001	000010	00000	1	1111111110101
+
+
+float =-14;  OR %g0,-14,%L2   
+               
+OP	RD	OP3	RS1	i	Unusued/zero -RS2
+10	10010	000010	00000	1	1111111110010
+
