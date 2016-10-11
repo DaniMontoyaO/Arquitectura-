@@ -1,0 +1,2 @@
+vhdl isim_temp "NPC.vhd"
+vhdl isim_temp "test_registro.vhd"
