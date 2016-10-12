@@ -1,5 +1,5 @@
 set -tmpdir "C:/Users/utp.CRIE/Desktop/Arquitectura--master/xst/projnav.tmp"
 set -xsthdpdir "C:/Users/utp.CRIE/Desktop/Arquitectura--master/xst"
 elaborate
--ifn Sumador.prj
+-ifn Alu.prj
 -ifmt mixed

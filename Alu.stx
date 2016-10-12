@@ -4,20 +4,20 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to C:/Users/utp.CRIE/Desktop/Arquitectura--master/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-ERROR:HDLParsers:3579 - Empty project file <C:/Users/utp.CRIE/Desktop/Arquitectura--master/Sumador_vhdl.prj>.
+ERROR:HDLParsers:3579 - Empty project file <C:/Users/utp.CRIE/Desktop/Arquitectura--master/Alu_vhdl.prj>.
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -25,7 +25,7 @@ Total CPU time to Xst completion: 0.09 secs
  
 --> 
 
-Total memory usage is 212780 kilobytes
+Total memory usage is 212524 kilobytes
 
 Number of errors   :    1 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
