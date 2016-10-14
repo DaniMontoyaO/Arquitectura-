@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    19:26:21 10/11/2016 
+-- Create Date:    16:52:51 10/14/2016 
 -- Design Name: 
 -- Module Name:    Alu - Behavioral 
 -- Project Name: 
@@ -19,7 +19,10 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -34,7 +37,7 @@ entity Alu is
     Port ( ContenidoRegistro1 : in  STD_LOGIC_VECTOR (31 downto 0);
            ContenidoRegistro2 : in  STD_LOGIC_VECTOR (31 downto 0);
            SalidaUc : in  STD_LOGIC_VECTOR (5 downto 0);
-           SalidaAlu : in  STD_LOGIC_VECTOR (31 downto 0));
+           SalidaAlu : out  STD_LOGIC_VECTOR (31 downto 0));
 end Alu;
 
 architecture Behavioral of Alu is
@@ -47,7 +50,9 @@ begin
 	  end if;
 	end process;
 	     
-			  
+			   
 
 end Behavioral;
+
+
 

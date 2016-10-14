@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    19:03:59 10/11/2016 
+-- Create Date:    17:00:19 10/14/2016 
 -- Design Name: 
 -- Module Name:    ProgramCounter - Behavioral 
 -- Project Name: 
@@ -34,7 +34,7 @@ use IEEE.numeric_std.ALL;
 
 entity ProgramCounter is
     Port ( SalidaNpc : in  STD_LOGIC_VECTOR (31 downto 0);
-           rst : in  STD_LOGIC_VECTOR (0 downto 0);
+           rst : in  STD_LOGIC;
            clk : in  STD_LOGIC_VECTOR (0 downto 0);
            SalidaPc : out  STD_LOGIC_VECTOR (31 downto 0));
 end ProgramCounter;
@@ -42,9 +42,17 @@ end ProgramCounter;
 architecture Behavioral of ProgramCounter is
 
 begin
-     process (SalidaNpc, rst, clk)
-	    begin
-		   if
+   process (SalidaNpc, rst, clk)
+	begin
+	if(rising_edge(clk))then
+			if rst='1' then
+			SalidaPc<=x"00000000";
+		else
+		SalidaPc <=SalidaNpc;		
+		end if;
+	end if;
+end process;
+  
 
 end Behavioral;
-
+ 

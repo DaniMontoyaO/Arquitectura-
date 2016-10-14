@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    19:20:25 10/11/2016 
+-- Create Date:    17:06:16 10/14/2016 
 -- Design Name: 
 -- Module Name:    UnidadControl - Behavioral 
 -- Project Name: 
@@ -19,6 +19,10 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -38,7 +42,44 @@ end UnidadControl;
 architecture Behavioral of UnidadControl is
 
 begin
+    process(Op,Op3 )
+  begin
+if (Op="10")then
+			       
+					 case Op3 is 
+				
+							when "000000" => -- ADD
+								SalidaUc  <= "000001";
 
+							when "000100" => -- SUB
+								 SalidaUc <= "000010";
+								 
+							when "000001" => -- AND
+								SalidaUc <= "000011";
+								 
+							when "000101" => -- ANDN
+								SalidaUc <= "000100";
+								 
+							when "000010" => -- OR
+								SalidaUc <= "000101";
+								
+							when "000110" => -- ORN
+								SalidaUc <= "000110";
+								 
+							when "000011" => -- XOR
+								SalidaUc  <= "000111"; 
+								
+							when "000111" => -- XORN
+								SalidaUc <= "001000";
+							when others => 
+								SalidaUc <= "111111"; 
+
+						end case;
+						 
+		end if; 
+
+end process; 
 
 end Behavioral;
+
 

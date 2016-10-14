@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    19:02:49 10/11/2016 
+-- Create Date:    16:57:54 10/14/2016 
 -- Design Name: 
 -- Module Name:    NextProgramCounter - Behavioral 
 -- Project Name: 
@@ -19,6 +19,10 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.numeric_std.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,7 +35,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity NextProgramCounter is
     Port ( Salidasumador : in  STD_LOGIC_VECTOR (31 downto 0);
-           rst : in  STD_LOGIC_VECTOR (0 downto 0);
+           rst : in  STD_LOGIC;
            clk : in  STD_LOGIC_VECTOR (0 downto 0);
            SalidaNpc : out  STD_LOGIC_VECTOR (31 downto 0));
 end NextProgramCounter;
@@ -39,6 +43,17 @@ end NextProgramCounter;
 architecture Behavioral of NextProgramCounter is
 
 begin
+    process (Salidasumador, rst, clk)
+	 begin
+	  if(rising_edge(clk))then
+	   if rst='1' then
+		  SalidaNpc<=x"00000000";
+		  else
+		  SalidaNpc<=Salidasumador;
+	   end if;
+    end if;
+	end process;
+    
 
 
 end Behavioral;

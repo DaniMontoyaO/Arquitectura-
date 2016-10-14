@@ -17,13 +17,13 @@ Total CPU time to Xst completion: 0.14 secs
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "E:/VERSION1/Procesador/Procesador1/Alu.vhd" in Library work.
-Entity <alu> compiled.
-Entity <alu> (Architecture <behavioral>) compiled.
+Compiling vhdl file "E:/VERSION1/Procesador/Procesador1/UnidadControl.vhd" in Library work.
+Entity <UnidadControl> compiled.
+Entity <UnidadControl> (Architecture <Behavioral>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.44 secs
+Total CPU time to Xst completion: 0.49 secs
  
 --> 
 

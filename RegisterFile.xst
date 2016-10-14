@@ -1,5 +1,5 @@
 set -tmpdir "E:/VERSION1/Procesador/Procesador1/xst/projnav.tmp"
 set -xsthdpdir "E:/VERSION1/Procesador/Procesador1/xst"
 elaborate
--ifn Alu.prj
+-ifn RegisterFile.prj
 -ifmt mixed
