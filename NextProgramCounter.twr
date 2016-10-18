@@ -1,0 +1,133 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml NextProgramCounter.twx NextProgramCounter.ncd -o
+NextProgramCounter.twr NextProgramCounter.pcf
+
+Design file:              NextProgramCounter.ncd
+Physical constraint file: NextProgramCounter.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+-----------------+------------+------------+------------------+--------+
+                 |Max Setup to|Max Hold to |                  | Clock  |
+Source           | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-----------------+------------+------------+------------------+--------+
+Salidasumador<0> |   -0.297(R)|    1.451(R)|clk_BUFGP         |   0.000|
+Salidasumador<1> |    0.268(R)|    0.994(R)|clk_BUFGP         |   0.000|
+Salidasumador<2> |   -0.071(R)|    1.270(R)|clk_BUFGP         |   0.000|
+Salidasumador<3> |    0.581(R)|    0.749(R)|clk_BUFGP         |   0.000|
+Salidasumador<4> |    0.554(R)|    0.769(R)|clk_BUFGP         |   0.000|
+Salidasumador<5> |    0.347(R)|    0.931(R)|clk_BUFGP         |   0.000|
+Salidasumador<6> |    0.356(R)|    0.923(R)|clk_BUFGP         |   0.000|
+Salidasumador<7> |    0.730(R)|    0.624(R)|clk_BUFGP         |   0.000|
+Salidasumador<8> |   -0.288(R)|    1.447(R)|clk_BUFGP         |   0.000|
+Salidasumador<9> |   -0.274(R)|    1.427(R)|clk_BUFGP         |   0.000|
+Salidasumador<10>|   -0.273(R)|    1.425(R)|clk_BUFGP         |   0.000|
+Salidasumador<11>|    3.951(R)|   -0.798(R)|clk_BUFGP         |   0.000|
+Salidasumador<12>|    3.937(R)|   -0.781(R)|clk_BUFGP         |   0.000|
+Salidasumador<13>|    3.948(R)|   -0.794(R)|clk_BUFGP         |   0.000|
+Salidasumador<14>|    3.937(R)|   -0.781(R)|clk_BUFGP         |   0.000|
+Salidasumador<15>|    3.939(R)|   -0.783(R)|clk_BUFGP         |   0.000|
+Salidasumador<16>|    3.940(R)|   -0.784(R)|clk_BUFGP         |   0.000|
+Salidasumador<17>|    3.943(R)|   -0.788(R)|clk_BUFGP         |   0.000|
+Salidasumador<18>|    3.939(R)|   -0.783(R)|clk_BUFGP         |   0.000|
+Salidasumador<19>|    3.937(R)|   -0.781(R)|clk_BUFGP         |   0.000|
+Salidasumador<20>|    3.934(R)|   -0.778(R)|clk_BUFGP         |   0.000|
+Salidasumador<21>|    3.954(R)|   -0.801(R)|clk_BUFGP         |   0.000|
+Salidasumador<22>|    3.929(R)|   -0.771(R)|clk_BUFGP         |   0.000|
+Salidasumador<23>|    3.932(R)|   -0.775(R)|clk_BUFGP         |   0.000|
+Salidasumador<24>|    3.929(R)|   -0.771(R)|clk_BUFGP         |   0.000|
+Salidasumador<25>|    3.928(R)|   -0.770(R)|clk_BUFGP         |   0.000|
+Salidasumador<26>|    3.930(R)|   -0.772(R)|clk_BUFGP         |   0.000|
+Salidasumador<27>|    3.931(R)|   -0.774(R)|clk_BUFGP         |   0.000|
+Salidasumador<28>|    3.931(R)|   -0.774(R)|clk_BUFGP         |   0.000|
+Salidasumador<29>|    3.934(R)|   -0.778(R)|clk_BUFGP         |   0.000|
+Salidasumador<30>|    3.934(R)|   -0.778(R)|clk_BUFGP         |   0.000|
+Salidasumador<31>|    3.946(R)|   -0.791(R)|clk_BUFGP         |   0.000|
+rst              |    2.907(R)|    0.787(R)|clk_BUFGP         |   0.000|
+-----------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+-------------+------------+------------------+--------+
+             | clk (edge) |                  | Clock  |
+Destination  |   to PAD   |Internal Clock(s) | Phase  |
+-------------+------------+------------------+--------+
+SalidaNpc<0> |    5.623(R)|clk_BUFGP         |   0.000|
+SalidaNpc<1> |    5.604(R)|clk_BUFGP         |   0.000|
+SalidaNpc<2> |    5.620(R)|clk_BUFGP         |   0.000|
+SalidaNpc<3> |    5.623(R)|clk_BUFGP         |   0.000|
+SalidaNpc<4> |    5.619(R)|clk_BUFGP         |   0.000|
+SalidaNpc<5> |    5.604(R)|clk_BUFGP         |   0.000|
+SalidaNpc<6> |    5.602(R)|clk_BUFGP         |   0.000|
+SalidaNpc<7> |    5.607(R)|clk_BUFGP         |   0.000|
+SalidaNpc<8> |    5.628(R)|clk_BUFGP         |   0.000|
+SalidaNpc<9> |    5.604(R)|clk_BUFGP         |   0.000|
+SalidaNpc<10>|    5.602(R)|clk_BUFGP         |   0.000|
+SalidaNpc<11>|    8.221(R)|clk_BUFGP         |   0.000|
+SalidaNpc<12>|    7.755(R)|clk_BUFGP         |   0.000|
+SalidaNpc<13>|    7.007(R)|clk_BUFGP         |   0.000|
+SalidaNpc<14>|    6.564(R)|clk_BUFGP         |   0.000|
+SalidaNpc<15>|    7.244(R)|clk_BUFGP         |   0.000|
+SalidaNpc<16>|    7.239(R)|clk_BUFGP         |   0.000|
+SalidaNpc<17>|    7.225(R)|clk_BUFGP         |   0.000|
+SalidaNpc<18>|    7.006(R)|clk_BUFGP         |   0.000|
+SalidaNpc<19>|    7.840(R)|clk_BUFGP         |   0.000|
+SalidaNpc<20>|    7.862(R)|clk_BUFGP         |   0.000|
+SalidaNpc<21>|    7.452(R)|clk_BUFGP         |   0.000|
+SalidaNpc<22>|    7.899(R)|clk_BUFGP         |   0.000|
+SalidaNpc<23>|    7.028(R)|clk_BUFGP         |   0.000|
+SalidaNpc<24>|    7.604(R)|clk_BUFGP         |   0.000|
+SalidaNpc<25>|    7.634(R)|clk_BUFGP         |   0.000|
+SalidaNpc<26>|    7.321(R)|clk_BUFGP         |   0.000|
+SalidaNpc<27>|    7.870(R)|clk_BUFGP         |   0.000|
+SalidaNpc<28>|    7.079(R)|clk_BUFGP         |   0.000|
+SalidaNpc<29>|    6.544(R)|clk_BUFGP         |   0.000|
+SalidaNpc<30>|    7.353(R)|clk_BUFGP         |   0.000|
+SalidaNpc<31>|    7.261(R)|clk_BUFGP         |   0.000|
+-------------+------------+------------------+--------+
+
+
+Analysis completed Tue Oct 18 17:21:14 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 163 MB
+
+
+

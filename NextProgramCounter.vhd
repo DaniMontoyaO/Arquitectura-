@@ -36,25 +36,23 @@ use IEEE.numeric_std.ALL;
 entity NextProgramCounter is
     Port ( Salidasumador : in  STD_LOGIC_VECTOR (31 downto 0);
            rst : in  STD_LOGIC;
-           clk : in  STD_LOGIC_VECTOR (0 downto 0);
+           clk : in  STD_LOGIC;
            SalidaNpc : out  STD_LOGIC_VECTOR (31 downto 0));
 end NextProgramCounter;
 
 architecture Behavioral of NextProgramCounter is
 
 begin
-    process (Salidasumador, rst, clk)
-	 begin
-	  if(rising_edge(clk))then
-	   if rst='1' then
-		  SalidaNpc<=x"00000000";
-		  else
-		  SalidaNpc<=Salidasumador;
-	   end if;
-    end if;
-	end process;
-    
-
+   process (Salidasumador,rst,clk)
+	begin
+	if(rising_edge(clk))then
+			if rst='1' then
+			SalidaNpc<=x"00000000";
+		else
+		SalidaNpc <=Salidasumador;		
+		end if;
+	end if;
+end process;
+ 
 
 end Behavioral;
-

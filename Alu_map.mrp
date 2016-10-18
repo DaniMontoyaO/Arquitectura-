@@ -1,0 +1,243 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Alu'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off
+-c 100 -o Alu_map.ncd Alu.ngd Alu.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Tue Oct 18 17:05:30 2016
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of 4 input LUTs:                34 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:             17 out of   4,656    1%
+    Number of Slices containing only related logic:      17 out of      17 100%
+    Number of Slices containing unrelated logic:          0 out of      17   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:          34 out of   9,312    1%
+  Number of bonded IOBs:                102 out of     232   43%
+    IOB Latches:                         32
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                1.00
+
+Peak Memory Usage:  260 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   1 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ContenidoRegistro1<0>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<1>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<2>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<3>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<4>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<5>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<6>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<7>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<8>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<9>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<10>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<11>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<12>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<13>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<14>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<15>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<16>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<17>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<18>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<19>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<20>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<21>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<22>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<23>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<24>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<25>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<26>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<27>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<28>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<29>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<30>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro1<31>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<0>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<1>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<2>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<3>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<4>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<5>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<6>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<7>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<8>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<9>              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<10>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<11>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<12>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<13>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<14>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<15>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<16>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<17>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<18>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<19>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<20>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<21>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<22>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<23>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<24>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<25>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<26>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<27>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<28>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<29>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<30>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| ContenidoRegistro2<31>             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SalidaAlu<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<3>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<4>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<5>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<6>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<7>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<8>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<9>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<10>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<11>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<12>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<13>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<14>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<15>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<16>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<17>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<18>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<19>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<20>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<21>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<22>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<23>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<24>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<25>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<26>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<27>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<28>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<29>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<30>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaAlu<31>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| SalidaUc<0>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SalidaUc<1>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SalidaUc<2>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SalidaUc<3>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SalidaUc<4>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SalidaUc<5>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

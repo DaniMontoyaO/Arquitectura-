@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "E:/VERSION1/Procesador/Procesador1/NextProgramCounter.xst" -ofn "E:/VERSION1/Procesador/Procesador1/NextProgramCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -bm test_alu.bmm -p xc3s500e-fg320-5 NextProgramCounter.ngc NextProgramCounter.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o NextProgramCounter_map.ncd NextProgramCounter.ngd NextProgramCounter.pcf 
+par -w -intstyle ise -ol high -t 1 NextProgramCounter_map.ncd NextProgramCounter.ncd NextProgramCounter.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml NextProgramCounter.twx NextProgramCounter.ncd -o NextProgramCounter.twr NextProgramCounter.pcf 
